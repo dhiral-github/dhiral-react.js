@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-// const API_URL = 'https://example.com/api/products'; // Replace with your API URL
-const API_URL = "https://fakestoreapi.com/products"; // Replace with your API URL
+
+const API_URL = "https://fakestoreapi.com/products";
 
 export const User = () => {
   const [products, setProducts] = useState([]);
@@ -43,7 +43,6 @@ export const User = () => {
   const handleUpdate = async () => {
     console.log("calle this");
     try {
-      // Make the API call to update the product
       const response = await fetch(`${API_URL}/${updateproduct.id}`, {
         method: "PUT",
         headers: {
@@ -71,14 +70,13 @@ export const User = () => {
 
   const handleDelete = async (product) => {
     try {
-      // Make the API call to delete the product
       const response = await fetch(`${API_URL}/${product.id}`, {
         method: "DELETE",
       });
 
       if (response.ok) {
         console.log(response.json(), "Product deleted successfully");
-        fetchProducts(); // Fetch updated product list
+        fetchProducts();
       } else {
         console.error("Failed to delete product");
       }
@@ -118,7 +116,6 @@ export const User = () => {
         <option value="women's clothing">women's clothing</option>
         <option value="electronics">electronics </option>
         <option value="jewelery">jewelery </option>
-        {/* Add more options as needed */}
       </select>
       <table className="product-table">
         <thead>
@@ -138,7 +135,6 @@ export const User = () => {
               <td>{product.description}</td>
               <td>{product.category}</td>
               <td>
-                {/* <button onClick={() => handleView(product)}>View</button> */}
                 <button
                   type="button"
                   class="btn btn-primary"
@@ -168,17 +164,6 @@ export const User = () => {
       </table>
 
       {isModalOpen && (
-        // <div className="modal">
-        //   <div className="modal-content">
-        //     <h2>Product Details</h2>
-        //     <p>Title: {selectedProduct.title}</p>
-        //     <p>Price: {selectedProduct.price}</p>
-        //     <p>Description: {selectedProduct.description}</p>
-        //     <p>Category: {selectedProduct.category}</p>
-        //     <button onClick={handleCloseModal}>Close</button>
-        //   </div>
-        // </div>
-
         <div
           class="modal fade"
           id="exampleModal"
@@ -221,17 +206,6 @@ export const User = () => {
       )}
 
       {!updateisModalOpen && (
-        // <div className="modal">
-        //   <div className="modal-content">
-        //     <h2>Product Details</h2>
-        //     <p>Title: {selectedProduct.title}</p>
-        //     <p>Price: {selectedProduct.price}</p>
-        //     <p>Description: {selectedProduct.description}</p>
-        //     <p>Category: {selectedProduct.category}</p>
-        //     <button onClick={handleCloseModal}>Close</button>
-        //   </div>
-        // </div>
-
         <div
           class="modal fade"
           id="UpdateModal"
