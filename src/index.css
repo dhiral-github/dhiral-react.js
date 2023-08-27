@@ -1,0 +1,52 @@
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.product-table th {
+  background-color: #f0f0f0;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.product-table th {
+  background-color: #f0f0f0;
+}
+
