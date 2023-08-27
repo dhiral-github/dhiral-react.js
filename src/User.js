@@ -137,7 +137,7 @@ export const User = () => {
               <td>
                 <button
                   type="button"
-                  class="btn btn-primary"
+                  class="btn btn-primary my-2"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                   onClick={() => handleView(product)}
@@ -146,7 +146,7 @@ export const User = () => {
                 </button>
                 <button
                   type="button"
-                  class="btn btn-primary"
+                  class="btn btn-primary my-2"
                   data-bs-toggle="modal"
                   data-bs-target="#UpdateModal"
                   onClick={() => {
@@ -156,7 +156,12 @@ export const User = () => {
                 >
                   Update
                 </button>
-                <button onClick={() => handleDelete(product)}>Delete</button>
+                <button
+                  class="btn btn-secondary my-2"
+                  onClick={() => handleDelete(product)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
